@@ -135,6 +135,7 @@ $show_pagination = $this->show_pagination;
                                                 <th  class="td-nama_peminjam"> Nama Peminjam</th>
                                                 <th  class="td-foto"> Foto</th>
                                                 <th  class="td-Keterangan"> Keterangan</th>
+                                                <th  class="td-Kondisi"> Status</th>
                                                 <th class="td-btn"></th>
                                             </tr>
                                         </thead>

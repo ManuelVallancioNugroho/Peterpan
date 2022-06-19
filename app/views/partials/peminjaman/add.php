@@ -133,6 +133,7 @@ $redirect_to = $this->redirect_to;
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    
                                                     <div class="form-group ">
                                                         <div class="row">
                                                             <div class="col-sm-4">
@@ -142,11 +143,28 @@ $redirect_to = $this->redirect_to;
                                                                 <div class="">
                                                                     <textarea placeholder="Enter Keterangan" id="ctrl-Keterangan"  required="" rows="5" name="Keterangan" class=" form-control"><?php  echo $this->set_field_value('Keterangan',""); ?></textarea>
                                                                     <!--<div class="invalid-feedback animated bounceIn text-center">Please enter text</div>-->
+                                                            
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
+                                                
+                                                <form method="POST">
+                                                <select name="status" id="status">
+                                                <option disabled selected> Pilih </option>
+                                                <?php 
+                                                $sql=mysql_query("SELECT * FROM status");
+                                                while ($data=mysql_fetch_array($sql)) {
+                                                ?>
+                                                <option value="<?=$data['status']?>"><?=$data['status']?></option> 
+                                                <?php
+                                                }
+                                                ?>
+                                                </select>
+
+                                           
+                                                
                                                 <div class="form-group form-submit-btn-holder text-center mt-3">
                                                     <div class="form-ajax-status"></div>
                                                     <button class="btn btn-primary" type="submit">
